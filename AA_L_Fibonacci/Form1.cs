@@ -17,6 +17,7 @@ namespace AA_L_Fibonacci
             InitializeComponent();
         }
 
+        Int64[] table;
         string ExecutionTimeLog = "";
       
         private void btnFirst_Click(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace AA_L_Fibonacci
 
         private void btnSecond_Click(object sender, EventArgs e)
         {
+            table = new Int64[100];
             var watch = System.Diagnostics.Stopwatch.StartNew();
             rtbResult.Text = TableFibonacci((int)nupNumber.Value).ToString();
             watch.Stop();
@@ -58,7 +60,6 @@ namespace AA_L_Fibonacci
             return RecursiveFibonacci(k - 1) + RecursiveFibonacci(k - 2);
         }
 
-        Int64[] table = new Int64[100];
         private Int64 TableFibonacci(int k)
         {
             if (table[k] == 0)
