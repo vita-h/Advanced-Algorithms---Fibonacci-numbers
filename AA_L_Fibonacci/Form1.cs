@@ -82,5 +82,11 @@ namespace AA_L_Fibonacci
             }
             return a;
         }
+
+        private void rtbExecution_TextChanged(object sender, EventArgs e)
+        {
+            rtbExecution.SelectionStart = rtbExecution.Text.Length;
+            rtbExecution.ScrollToCaret();
+        }
     }
 }

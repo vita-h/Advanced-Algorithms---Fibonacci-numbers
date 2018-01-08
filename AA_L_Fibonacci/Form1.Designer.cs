@@ -107,6 +107,7 @@
             this.rtbExecution.Size = new System.Drawing.Size(487, 252);
             this.rtbExecution.TabIndex = 7;
             this.rtbExecution.Text = "";
+            this.rtbExecution.TextChanged += new System.EventHandler(this.rtbExecution_TextChanged);
             // 
             // rtbResult
             // 
