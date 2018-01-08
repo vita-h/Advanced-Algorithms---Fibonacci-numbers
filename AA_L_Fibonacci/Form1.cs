@@ -22,7 +22,7 @@ namespace AA_L_Fibonacci
         private void btnFirst_Click(object sender, EventArgs e)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            txtFib.Text = RecursiveFibonacci((int)nupNumber.Value).ToString();
+            rtbResult.Text = RecursiveFibonacci((int)nupNumber.Value).ToString();
             watch.Stop();
             ExecutionTimeLog += "First impl. exec. in milliseconds: " + watch.ElapsedMilliseconds.ToString() + "\n";
             ExecutionTimeLog += "First impl. exec. in tics: " + watch.ElapsedTicks.ToString() + "\n\n";
@@ -32,7 +32,7 @@ namespace AA_L_Fibonacci
         private void btnSecond_Click(object sender, EventArgs e)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            txtFib.Text = TableFibonacci((int)nupNumber.Value).ToString();
+            rtbResult.Text = TableFibonacci((int)nupNumber.Value).ToString();
             watch.Stop();
             ExecutionTimeLog += "Second impl. exec. in milliseconds: " + watch.ElapsedMilliseconds.ToString() + "\n";
             ExecutionTimeLog += "Second impl. exec. in tics: " + watch.ElapsedTicks.ToString() + "\n\n";
@@ -42,14 +42,14 @@ namespace AA_L_Fibonacci
         private void btnThird_Click(object sender, EventArgs e)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            txtFib.Text = ThirdImplementation((int)nupNumber.Value).ToString();
+            rtbResult.Text = ThirdImplementation((int)nupNumber.Value).ToString();
             watch.Stop();
             ExecutionTimeLog += "Third impl. exec. in milliseconds: " + watch.ElapsedMilliseconds.ToString() + "\n";
             ExecutionTimeLog += "Third impl. exec. in tics: " + watch.ElapsedTicks.ToString() + "\n\n";
             rtbExecution.Text = ExecutionTimeLog;
         }
 
-        private int RecursiveFibonacci(int k)
+        private Int64 RecursiveFibonacci(int k)
         {
             if (k == 1)
                 return 1;
@@ -58,8 +58,8 @@ namespace AA_L_Fibonacci
             return RecursiveFibonacci(k - 1) + RecursiveFibonacci(k - 2);
         }
 
-        int[] table = new int[1000];
-        private int TableFibonacci(int k)
+        Int64[] table = new Int64[100];
+        private Int64 TableFibonacci(int k)
         {
             if (table[k] == 0)
             {
@@ -71,12 +71,12 @@ namespace AA_L_Fibonacci
             return table[k];
         }
 
-        private int ThirdImplementation(int k)
+        private Int64 ThirdImplementation(int k)
         {
-            int a = 0, b = 1;
+            Int64 a = 0, b = 1;
             for (int i = 0; i < k; i++)
             {
-                int c = a + b;
+                Int64 c = a + b;
                 a = b;
                 b = c;
             }

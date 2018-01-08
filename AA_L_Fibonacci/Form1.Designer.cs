@@ -34,14 +34,15 @@
             this.lblNumber = new System.Windows.Forms.Label();
             this.nupNumber = new System.Windows.Forms.NumericUpDown();
             this.lblFib = new System.Windows.Forms.Label();
-            this.txtFib = new System.Windows.Forms.TextBox();
             this.rtbExecution = new System.Windows.Forms.RichTextBox();
+            this.rtbResult = new System.Windows.Forms.RichTextBox();
+            this.lblExec = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nupNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFirst
             // 
-            this.btnFirst.Location = new System.Drawing.Point(35, 79);
+            this.btnFirst.Location = new System.Drawing.Point(255, 30);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(221, 34);
             this.btnFirst.TabIndex = 0;
@@ -51,7 +52,7 @@
             // 
             // btnSecond
             // 
-            this.btnSecond.Location = new System.Drawing.Point(35, 123);
+            this.btnSecond.Location = new System.Drawing.Point(255, 74);
             this.btnSecond.Name = "btnSecond";
             this.btnSecond.Size = new System.Drawing.Size(221, 34);
             this.btnSecond.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // btnThird
             // 
-            this.btnThird.Location = new System.Drawing.Point(35, 167);
+            this.btnThird.Location = new System.Drawing.Point(255, 118);
             this.btnThird.Name = "btnThird";
             this.btnThird.Size = new System.Drawing.Size(221, 34);
             this.btnThird.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             this.nupNumber.Location = new System.Drawing.Point(100, 32);
             this.nupNumber.Maximum = new decimal(new int[] {
-            1000,
+            93,
             0,
             0,
             0});
@@ -93,35 +94,45 @@
             // lblFib
             // 
             this.lblFib.AutoSize = true;
-            this.lblFib.Location = new System.Drawing.Point(259, 32);
+            this.lblFib.Location = new System.Drawing.Point(32, 166);
             this.lblFib.Name = "lblFib";
             this.lblFib.Size = new System.Drawing.Size(76, 17);
             this.lblFib.TabIndex = 5;
             this.lblFib.Text = "Fibonacci: ";
             // 
-            // txtFib
-            // 
-            this.txtFib.Location = new System.Drawing.Point(337, 32);
-            this.txtFib.Name = "txtFib";
-            this.txtFib.ReadOnly = true;
-            this.txtFib.Size = new System.Drawing.Size(160, 22);
-            this.txtFib.TabIndex = 6;
-            // 
             // rtbExecution
             // 
-            this.rtbExecution.Location = new System.Drawing.Point(10, 222);
+            this.rtbExecution.Location = new System.Drawing.Point(10, 297);
             this.rtbExecution.Name = "rtbExecution";
-            this.rtbExecution.Size = new System.Drawing.Size(487, 198);
+            this.rtbExecution.Size = new System.Drawing.Size(487, 252);
             this.rtbExecution.TabIndex = 7;
             this.rtbExecution.Text = "";
+            // 
+            // rtbResult
+            // 
+            this.rtbResult.Location = new System.Drawing.Point(12, 186);
+            this.rtbResult.Name = "rtbResult";
+            this.rtbResult.Size = new System.Drawing.Size(487, 59);
+            this.rtbResult.TabIndex = 8;
+            this.rtbResult.Text = "";
+            // 
+            // lblExec
+            // 
+            this.lblExec.AutoSize = true;
+            this.lblExec.Location = new System.Drawing.Point(32, 277);
+            this.lblExec.Name = "lblExec";
+            this.lblExec.Size = new System.Drawing.Size(101, 17);
+            this.lblExec.TabIndex = 9;
+            this.lblExec.Text = "Execution Log:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 432);
+            this.ClientSize = new System.Drawing.Size(509, 558);
+            this.Controls.Add(this.lblExec);
+            this.Controls.Add(this.rtbResult);
             this.Controls.Add(this.rtbExecution);
-            this.Controls.Add(this.txtFib);
             this.Controls.Add(this.lblFib);
             this.Controls.Add(this.nupNumber);
             this.Controls.Add(this.lblNumber);
@@ -144,8 +155,9 @@
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.NumericUpDown nupNumber;
         private System.Windows.Forms.Label lblFib;
-        private System.Windows.Forms.TextBox txtFib;
         private System.Windows.Forms.RichTextBox rtbExecution;
+        private System.Windows.Forms.RichTextBox rtbResult;
+        private System.Windows.Forms.Label lblExec;
     }
 }
 
